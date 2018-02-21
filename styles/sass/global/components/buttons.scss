@@ -1,0 +1,9 @@
+.btn {
+    display: inline-block;
+    font-weight: $btn-font-weight;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: $btn-border-width solid transparent;
+}
