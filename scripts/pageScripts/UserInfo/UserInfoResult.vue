@@ -89,10 +89,6 @@
                     });
                 }
             },
-            /* deleteUser(id) {
-                this.currentId = id;
-                this.showDelete = true;
-            }, */
             doDeleteUser(id) {
                 this.showDelete = false;
                 Axios.delete(`http://localhost:3000/users/${id}`).then(res => {
@@ -101,9 +97,6 @@
                     });
                 });
             },
-            /* doAbortDeleteUser() {
-                this.showDelete = false;
-            }, */
             updateUser(id, callback) {
                 let obj;
                 for (var i = 0; i < this.posts.length; i++) {
@@ -118,11 +111,7 @@
                 });
             },
             saveUser(id) {
-                /* const updated = {
-                    name: this.post.name,
-                    username: this.post.username
-                }
-                this.$emit('change-user', id, updated) */
+
             }
         }
     }
