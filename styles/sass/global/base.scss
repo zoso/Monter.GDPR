@@ -48,7 +48,24 @@ footer {
     // align-self: flex-end;
 }
 
+img {
+    max-width: 100%;
+}
 
+a {
+    display: inline;
+    // text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000;
+    /* background-image: linear-gradient(90deg, currentColor 100%, transparent 100%);
+    background-position: 0 1.04em;
+    background-repeat: repeat-x;
+    background-size: 1px 1px; */
+    text-decoration: none;
+    color: $monter-red;
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+    }
+}
 
 .row > [class^="col"] {
     /* padding-top: .75rem;

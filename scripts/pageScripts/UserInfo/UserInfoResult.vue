@@ -11,19 +11,6 @@
             <div v-html="msg">{{ msg }}</div>
         </div>
         <div class="col-sm-12">
-            <!-- <div class="row" v-if="showDelete">
-                <div class="col-sm-12">
-                    Er du sikker på at du vil slette all informasjon?
-                    <div>
-                        <button class="btn btn-danger" type="button" v-on:click="doDeleteUser">
-                            Ja, slett informasjonen
-                        </button>
-                        <button class="btn btn-success" type="button" v-on:click="doAbortDeleteUser">
-                            Nei, jeg angrer
-                        </button>
-                    </div>
-                </div>
-            </div> -->
             <p>
                 Antall personer i database: {{ posts.length }}
             </p>
@@ -34,7 +21,6 @@
     </div>
 
 </template>
-
 <script>
     import SearchResult from './UserInfoSearchResult.vue'
     import Axios from 'axios'
@@ -47,7 +33,7 @@
                 posts: [],
                 currentId: 0,
                 showDelete: false,
-            }
+            };
         },
         components: { SearchResult },
         methods: {

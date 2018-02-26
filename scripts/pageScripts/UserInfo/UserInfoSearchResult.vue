@@ -4,11 +4,18 @@
             <h2 class="h2">
                 Person info
             </h2>
-            <div>Id: {{ post.id }}</div>
-            <div>Navn: {{ post.firstName }} {{ post.lastName }}</div>
-            <div>Phone: {{ post.phone }}</div>
-            <div>Address: {{ post.zipCode }} {{ post.city }}</div>
-            <div>Email: {{ post.email }}</div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div>Id: {{ post.id }}</div>
+                    <div>Navn: {{ post.firstName }} {{ post.lastName }}</div>
+                    <div>Phone: {{ post.phone }}</div>
+                    <div>Address: {{ post.zipCode }} {{ post.city }}</div>
+                    <div>Email: {{ post.email }}</div>
+                </div>
+                <div class="col-sm-6 text-right">
+                    <img :src="post.avatar" />
+                </div>
+            </div>
             <h2 class="h2">
                 Newsletter:
             </h2>
