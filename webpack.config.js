@@ -16,7 +16,8 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, './scripts/dist'),
-        filename: '[name].bundle.js'
+        filename: '[name].bundle.js',
+        publicPath: '.'
     },
     module: {
         rules: [
@@ -54,17 +55,18 @@ module.exports = {
           'vue$': 'vue/dist/vue.esm.js'
         }
     },
+    devtool: 'inline-source-map',
     plugins: [
         new ExtractTextPlugin({
             filename: '../../styles/dist/[name].bundle.css',
             allChunks: true
         }),
         new CleanWebpackPlugin(cleanPaths)
-    ],
+    ]/* ,
     devServer: {
         contentBase: '.',
         historyApiFallback: true,
         inline: true,
         open: true
-    }
+    } */
 }
