@@ -3,3 +3,4 @@ scripts/dist/*.js
 styles/dist/*.css
 dist
 *.css
+npm-debug.log
