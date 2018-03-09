@@ -9,9 +9,16 @@ const cleanPaths = [
 
 module.exports = {
     entry: {
-        app: './scripts/app.js',
-        userApp: './scripts/pageScripts/UserInfo.js',
-        globalStyle: './styles/sass/init.scss'
+        app: [
+            /* app: './scripts/app.js',
+            userApp: './scripts/pageScripts/UserInfo.js',
+            globalStyle: './styles/sass/init.scss' 
+            path.resolve(__dirname, 'scripts/app.js'),*/
+            path.resolve(__dirname, 'styles/sass/init.scss')
+        ],
+        userApp: [
+            path.resolve(__dirname, 'scripts/pageScripts/UserInfo.js')
+        ]
         //bootstrap4: './styles/sass/bootstrap/bootstrap-grid.scss'
     },
     output: {
@@ -61,7 +68,7 @@ module.exports = {
             filename: '../../styles/dist/[name].bundle.css',
             allChunks: true
         }),
-        new CleanWebpackPlugin(cleanPaths)
+        // new CleanWebpackPlugin(cleanPaths)
     ]/* ,
     devServer: {
         contentBase: '.',

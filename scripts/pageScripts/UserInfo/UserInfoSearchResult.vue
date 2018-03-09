@@ -91,9 +91,6 @@
             </div>
         </div>
     </div>
-    <!-- <div class="col-sm-4 text-right">
-        <img :src="post.avatar" />
-    </div> -->
 </template>
 
 <script>

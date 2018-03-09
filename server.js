@@ -7,7 +7,7 @@ const app = express();
 const config = require('./webpack.config.js');
 const compiler = webpack(config);
 
-const port = 3001;
+const port = 3661;
 
 app.use('/scripts', express.static(path.join(__dirname, 'scripts')));
 app.use('/styles', express.static(path.join(__dirname, 'styles')))

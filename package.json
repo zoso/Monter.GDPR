@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server -d --hot --config webpack.config.js --watch",
+    "start": "webpack-dev-server -d --hot --config webpack.config.js --watch --progress",
     "build": "webpack",
     "watch": "webpack -w",
     "server": "node server.js",
