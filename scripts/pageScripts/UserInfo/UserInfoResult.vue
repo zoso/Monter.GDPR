@@ -1,6 +1,6 @@
 <template>
     <div class="row">
-        <div class="col-sm">
+        <div class="col-sm-6">
             <label for="email">Epost:</label>
             <div class="input-group mb-3">
                 <input id="email" type="text" class="form-control" placeholder="Din epostadresse" aria-label="Din epostadresse" aria-describedby="basic-addon2">
@@ -9,6 +9,12 @@
                 </div>
             </div>
             <div v-html="msg">{{ msg }}</div>
+        </div>
+        <div class="col-sm-6">
+            Some info here
+            <p>
+                GDPR
+            </p>
         </div>
         <div class="col-sm-12">
             <p>
@@ -72,6 +78,15 @@
                         } else {
                             this.msg = `<p>Fant ikke noe data knyttet til denne eposten: ${val}</p>`;
                         }
+                        Axios.post('http://localhost:3000/searches', {
+                            email: val
+                        })
+                        .then(res => {
+                            console.log("added search to db", res);
+                        })
+                        .catch(err => {
+                            console.log("error occured", err);
+                        });
                     });
                 }
             },

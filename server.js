@@ -11,6 +11,7 @@ const port = 3661;
 
 app.use('/scripts', express.static(path.join(__dirname, 'scripts')));
 app.use('/styles', express.static(path.join(__dirname, 'styles')))
+app.use('/UI', express.static(path.join(__dirname, 'UI')))
 
 app.use(webpackDevMiddleware(compiler, {
     publicPath: config.output.publicPath
